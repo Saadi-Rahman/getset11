@@ -5,18 +5,22 @@ document.getElementById("btn-calculate").addEventListener("click", function(){
     const perPlayer = parseFloat(parPlayerString);
     perPlayerField.value = "";
 
+    if(isNaN(perPlayer)) {
+        alert("Please provide a valid Number.");
+        return;
+    }
+
     // calculate player expenses 
     const playerExpensesElement = document.getElementById("player-expenses");
     const playerExpenses = playerExpensesElement.innerText;
 
     const totalSelectedPlayerElement = document.getElementById("total-selected-player");
     const finaleSelectedPlayer = totalSelectedPlayerElement.innerText;
-    console.log(finaleSelectedPlayer);
 
     const totalPlayerExpenses = perPlayer * finaleSelectedPlayer;
     playerExpensesElement.innerText = totalPlayerExpenses;
-    console.log(totalPlayerExpenses);
 });
+
 
 
 // budget calculation
@@ -26,10 +30,20 @@ document.getElementById("btn-calculate-total").addEventListener("click", functio
     const managerCost = parseFloat(managerCostString);
     managerCostField.value = "";
 
+    if(isNaN(managerCost)) {
+        alert("Please provide a valid Number in the both input field.");
+        return;
+    }
+
     const coachCostField = document.getElementById("coach-cost-field");
     const coachCostString = coachCostField.value;
     const coachCost = parseFloat(coachCostString);
     coachCostField.value = "";
+
+    if(isNaN(coachCost)) {
+        alert("Please provide a valid Number in the both input field.");
+        return;
+    }
 
     const playerExpensesElement = document.getElementById("player-expenses");
     const playerExpensesString = playerExpensesElement.innerText;
@@ -41,5 +55,4 @@ document.getElementById("btn-calculate-total").addEventListener("click", functio
     // calculate total budget
     const totalBudget = playerExpenses + managerCost + coachCost;
     totalBudgetElement.innerText = totalBudget;
-    console.log(totalBudget);
 })
