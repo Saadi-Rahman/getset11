@@ -9,7 +9,11 @@ document.getElementById("btn-calculate").addEventListener("click", function(){
     const playerExpensesElement = document.getElementById("player-expenses");
     const playerExpenses = playerExpensesElement.innerText;
 
-    const totalPlayerExpenses = perPlayer * 5;
+    const totalSelectedPlayerElement = document.getElementById("total-selected-player");
+    const finaleSelectedPlayer = totalSelectedPlayerElement.innerText;
+    console.log(finaleSelectedPlayer);
+
+    const totalPlayerExpenses = perPlayer * finaleSelectedPlayer;
     playerExpensesElement.innerText = totalPlayerExpenses;
     console.log(totalPlayerExpenses);
 });
@@ -26,7 +30,7 @@ document.getElementById("btn-calculate-total").addEventListener("click", functio
     const coachCostString = coachCostField.value;
     const coachCost = parseFloat(coachCostString);
     coachCostField.value = "";
-    
+
     const playerExpensesElement = document.getElementById("player-expenses");
     const playerExpensesString = playerExpensesElement.innerText;
     const playerExpenses = parseFloat(playerExpensesString);
