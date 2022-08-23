@@ -4,7 +4,6 @@ document.getElementById("btn-calculate").addEventListener("click", function(){
     const parPlayerString = perPlayerField.value;
     const perPlayer = parseFloat(parPlayerString);
     perPlayerField.value = "";
-    console.log(perPlayer);
 
     // calculate player expenses 
     const playerExpensesElement = document.getElementById("player-expenses");
@@ -22,14 +21,12 @@ document.getElementById("btn-calculate-total").addEventListener("click", functio
     const managerCostString = managerCostField.value;
     const managerCost = parseFloat(managerCostString);
     managerCostField.value = "";
-    console.log(managerCost);
 
     const coachCostField = document.getElementById("coach-cost-field");
     const coachCostString = coachCostField.value;
     const coachCost = parseFloat(coachCostString);
     coachCostField.value = "";
-    console.log(coachCost);
-
+    
     const playerExpensesElement = document.getElementById("player-expenses");
     const playerExpensesString = playerExpensesElement.innerText;
     const playerExpenses = parseFloat(playerExpensesString);
