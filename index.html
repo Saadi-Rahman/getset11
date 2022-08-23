@@ -158,29 +158,29 @@
                             <!-- Per Player Calculation -->
                             <div class="text-lg py-2 mt-6" style="display: flex; justify-content: space-between; align-items: center;">
                                 <p class="font-semibold">Per Player</p>
-                                <input class="w-2/4 px-3 py-1.5 bg-slate-900 border border-slate-400 rounded-md" type="number" placeholder="1000">
+                                <input id="per-player-field" class="w-2/4 px-3 py-1.5 bg-slate-900 border border-slate-400 rounded-md" type="number" placeholder="1000">
                             </div>
-                            <button class="bg-gradient-to-br from-blue-700 to-sky-600 text-xl font-semibold my-3 py-2.5 w-full rounded-md">Calculate</button>
+                            <button id="btn-calculate" class="bg-gradient-to-br from-blue-700 to-sky-600 text-xl font-semibold my-3 py-2.5 w-full rounded-md">Calculate</button>
 
                             <div class="text-xl my-8" style="display: flex; justify-content: space-between; align-items: center;">
                                 <p class="font-bold">Player Expenses</p>
-                                <p class="font-bold">$<span>5000</span></p>
+                                <p class="font-bold">$<span id="player-expenses">00</span></p>
                             </div>
 
                             <!-- Player Expenses Calculation -->
                             <div class="text-lg py-1" style="display: flex; justify-content: space-between; align-items: center;">
                                 <p class="font-semibold">Manager</p>
-                                <input class="w-2/4 px-3 py-1.5 bg-slate-900 border border-slate-400 rounded-md" type="number" placeholder="2000">
+                                <input id="manager-cost-field" class="w-2/4 px-3 py-1.5 bg-slate-900 border border-slate-400 rounded-md" type="number" placeholder="2000">
                             </div>
                             <div class="text-lg py-1" style="display: flex; justify-content: space-between; align-items: center;">
                                 <p class="font-semibold">Coach</p>
-                                <input class="w-2/4 px-3 py-1.5 bg-slate-900 border border-slate-400 rounded-md" type="number" placeholder="4000">
+                                <input id="coach-cost-field" class="w-2/4 px-3 py-1.5 bg-slate-900 border border-slate-400 rounded-md" type="number" placeholder="4000">
                             </div>
-                            <button class="bg-gradient-to-br from-blue-700 to-sky-600 text-xl font-semibold my-3 py-2.5 w-full rounded-md">Calculate Total</button>
+                            <button id="btn-calculate-total" class="bg-gradient-to-br from-blue-700 to-sky-600 text-xl font-semibold my-3 py-2.5 w-full rounded-md">Calculate Total</button>
 
                             <div class="text-xl mt-3 mb-10" style="display: flex; justify-content: space-between; align-items: center;">
                                 <p class="font-bold">Total</p>
-                                <p class="font-bold text-orange-500">$<span>11000</span></p>
+                                <p class="font-bold text-orange-500">$<span id="total-budget">00</span></p>
                             </div>
                         </div>
                     </div>
@@ -196,5 +196,7 @@
         <hr>
         <p class="text-white text-sm font-semibold my-10">copyright ©2023. GetSet11. All rights reserved.</p>
     </footer>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
