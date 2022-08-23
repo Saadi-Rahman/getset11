@@ -1,15 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GetSet11 - Choose your best 5 to set your XI</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Choose your best 5 to set your XI</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetSet11 - Choose the best 5 to set your XI</title>
+    <!-- Tailwind link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
+<body class="bg-slate-800">
+    <header class="bg-slate-900 pb-32 pt-12">
+        <section class="container mx-5 sm:mx-auto sm:flex items-center justify-around">
+            <div class="pt-10 sm:pt-0">
+                <img class="w-3/4 sm:w-full" src="images/banner pic-1.png" alt="">
+            </div>
+            <div class="space-y-4">
+                <h1 class= "text-4xl sm:text-5xl uppercase text-white font-bold">Choose the best five <br> to set your XI</h1>
+                <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, ipsum.</p>
+            </div>
+        </section>
+    </header>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  </body>
+    <main class="container mx-auto my-20">
+        <!-- <div class="flex flex-col md:flex-row gap-5 md:mx-auto lg:mx-28 my-14"> -->
+        <div class="flex flex-col md:flex-row gap-5 justify-center">
+            <!-- players section start -->
+            <section>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+                    <!-- player-1 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-1.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Lionel Messi</h3>
+                          <p class="pb-2 text-lg font-semibold">36 Goals  .  120 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-2 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-2.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Neymar Jr</h3>
+                          <p class="pb-2 text-lg font-semibold">20 Goals  .  72 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-3 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-3.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Kylian Mbappee</h3>
+                          <p class="pb-2 text-lg font-semibold">28 Goals  .  55 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-4 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-4.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Vitor Machado</h3>
+                          <p class="pb-2 text-lg font-semibold">10 Goals  .  22 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-5 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-5.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Sergio Ramos</h3>
+                          <p class="pb-2 text-lg font-semibold">3 Goals  .  10 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-6 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-6.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Renato Sanches</h3>
+                          <p class="pb-2 text-lg font-semibold">5 Goals  .  12 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-7 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-1.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Lionel Messi</h3>
+                          <p class="pb-2 text-lg font-semibold">36 Goals  .  120 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-8 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-1.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Lionel Messi</h3>
+                          <p class="pb-2 text-lg font-semibold">36 Goals  .  120 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                    <!-- player-9 -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg">
+                      <img class="rounded-t-lg w-full" src="images/player-1.png" alt="">
+                      <div class="text-white text-center p-5">
+                          <h3 class="text-2xl font-bold pb-2">Lionel Messi</h3>
+                          <p class="pb-2 text-lg font-semibold">36 Goals  .  120 Assist</p>
+                          <button class="bg-gradient-to-br from-blue-700 to-sky-600 uppercase text-xl font-semibold mt-3 py-2 w-full rounded-md">select</button>
+                      </div>
+                    </div>
+                </div>
+            </section>
+            <!-- players section end -->
+
+            <!-- sidebar start -->
+            <section>
+                <div class="bg-yellow-400 grid gap-5 mb-10">
+                    <!-- player selection start -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg p-10">
+                        <div class="text-white">
+                            <h3 class="text-2xl md:text-3xl font-bold">Selected-V</h3>
+                            <img class="" src="images/orange-line.png" alt="">
+
+                            <div class="text-md md:text-lg font-semibold pt-6">
+                                <ul>
+                                    <li class="pb-5">1.<span class="pl-4">Lionel Messi</span></li>
+                                    <li class="pb-5">2.<span class="pl-4">Kylian Mbappe</span></li>
+                                    <li class="pb-5">3.<span class="pl-4">Neymar Jr</span></li>
+                                    <li class="pb-5">4.<span class="pl-4">Renato Sanches</span></li>
+                                    <li class="pb-5">5.<span class="pl-4">Keylor Navas</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- player selection end -->
+
+                    <!-- budget calculation start -->
+                    <div class="bg-slate-900 border border-slate-100 rounded-lg p-5">
+                        <div class="text-white">
+                            <h3 class="text-2xl md:text-3xl font-bold">Budget</h3>
+                            <img class="" src="images/orange-line.png" alt="">
+
+                            <div class="text-md md:text-lg font-semibold pt-6">
+                                <ul>
+                                    <li class="pb-5">1.<span class="pl-4">Lionel Messi</span></li>
+                                    <li class="pb-5">2.<span class="pl-4">Kylian Mbappe</span></li>
+                                    <li class="pb-5">3.<span class="pl-4">Neymar Jr</span></li>
+                                    <li class="pb-5">4.<span class="pl-4">Renato Sanches</span></li>
+                                    <li class="pb-5">5.<span class="pl-4">Keylor Navas</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- budget calculation end -->
+                </div>
+            </section>
+            <!-- sidebar end -->
+        </div>
+    </main>
+
+    <footer class="mb-5 text-center">
+        <p class="text-white text-sm font-semibold">GetSet11. Copyright ©2023. All rights reserved.</p>
+    </footer>
+</body>
 </html>
