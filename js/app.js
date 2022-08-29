@@ -1,58 +1,62 @@
+// Common function to get input value from an input field
+function getInputFieldValueById(inputId){
+    const inputField = document.getElementById(inputId);
+    const inputFieldValueString = inputField.value;
+    const inputFieldValue = parseFloat(inputFieldValueString);
+    inputField.value = "";
+    return Math.abs(inputFieldValue);
+};
+
+// Common function to get Text Element value from a Text Element
+function getTextElementValueById(elementId){
+    const textElement = document.getElementById(elementId);
+    const textElementValueString = textElement.innerText;
+    const textElementValue = parseFloat(textElementValueString);
+    return textElementValue;
+};
+
+// Common function to set Element to a Text Element
+function setTextElementValueById(elementId, newValue){
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = newValue;
+};
+
+
 // player calculation 
 document.getElementById("btn-calculate").addEventListener("click", function(){
-    const perPlayerField = document.getElementById("per-player-field");
-    const parPlayerString = perPlayerField.value;
-    const perPlayer = parseFloat(parPlayerString);
-    perPlayerField.value = "";
+    const perPlayerBasePrice = getInputFieldValueById("per-player-field");
 
-    if(isNaN(perPlayer)) {
+    if(isNaN(perPlayerBasePrice)) {
         alert("Please provide a valid Number.");
         return;
     }
 
     // calculate player expenses 
-    const playerExpensesElement = document.getElementById("player-expenses");
-    const playerExpenses = playerExpensesElement.innerText;
+    const finaleSelectedPlayer = getTextElementValueById("total-selected-player");
 
-    const totalSelectedPlayerElement = document.getElementById("total-selected-player");
-    const finaleSelectedPlayer = totalSelectedPlayerElement.innerText;
-
-    const totalPlayerExpenses = perPlayer * finaleSelectedPlayer;
-    playerExpensesElement.innerText = totalPlayerExpenses;
+    const totalPlayerExpenses = (perPlayerBasePrice * finaleSelectedPlayer).toFixed();
+    setTextElementValueById("player-expenses", totalPlayerExpenses);
 });
 
 
 
 // budget calculation
 document.getElementById("btn-calculate-total").addEventListener("click", function(){
-    const managerCostField = document.getElementById("manager-cost-field");
-    const managerCostString = managerCostField.value;
-    const managerCost = parseFloat(managerCostString);
-    managerCostField.value = "";
-
+    const managerCost = getInputFieldValueById("manager-cost-field");
     if(isNaN(managerCost)) {
         alert("Please provide a valid Number in the both input field.");
         return;
     }
 
-    const coachCostField = document.getElementById("coach-cost-field");
-    const coachCostString = coachCostField.value;
-    const coachCost = parseFloat(coachCostString);
-    coachCostField.value = "";
-
+    const coachCost = getInputFieldValueById("coach-cost-field");
     if(isNaN(coachCost)) {
         alert("Please provide a valid Number in the both input field.");
         return;
     }
-
-    const playerExpensesElement = document.getElementById("player-expenses");
-    const playerExpensesString = playerExpensesElement.innerText;
-    const playerExpenses = parseFloat(playerExpensesString);
-
-    const totalBudgetElement = document.getElementById("total-budget");
-    const budget = totalBudgetElement.innerText;
+    
+    const playerExpenses = getTextElementValueById("player-expenses");
 
     // calculate total budget
-    const totalBudget = playerExpenses + managerCost + coachCost;
-    totalBudgetElement.innerText = totalBudget;
+    const totalBudget = (playerExpenses + managerCost + coachCost).toFixed();
+    setTextElementValueById("total-budget", totalBudget);
 })
